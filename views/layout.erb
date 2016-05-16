@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Libanon Wiki</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <header class="site_header">
+      <div class="logo">
+        <p>Libanon</p>
+        <br>
+        <p>Wiki</p>
+        <img class="site_logo" src="./res/img/crane_logo.png" alt="logo.png">
+      </div>
+      <% unless @user %>
+        <form action="/login" class="">
+          <button type="submit">Login</button>
+        </form>
+      <% end %>
+      <div id="navbar">
+        <ul>
+          <li class="navigation"><a href='/'><span>Start</span></a></li>
+          <li class="navigation"><a href='/food'><span>Food</span></a></li>
+          <li class="navigation"><a href='/attractions'><span>Attractions</span></a></li>
+          <li class="navigation"><a href='/map'><span>Map</span></a></li>
+          <li class="navigation"><a href='/contact'><span>Contact</span></a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer>
+      <nav>
+        <span>copyright &copy; libanonwiki.se 2016</span>
+      </nav>
+    </footer>
+  </body>
+</html>
