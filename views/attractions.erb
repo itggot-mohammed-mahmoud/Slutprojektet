@@ -1,18 +1,21 @@
     <h3>Attractions</h3>
+    <% if @user && @user.admin == true %>
+        <button>Edit</button>
+    <% end %>
     <div class="attraction_item">
-        <img src="./img/baalbeck_tempel.jpg" alt="Baalbeck tempel" class="attraction_image">
+        <img src="./img/baalbeck_tempel.jpg" alt="Baalbeck tempel" class="attraction_image ridge-border">
         <h3 class="attraction_name">Baalbeck tempel</h3>
         <p class="attraction_description">Baalbeck är en stad i Bekaa dalen i Libanon. Det är känt för sitt tempelruin. Det är Libanons största arv från rommarriket och det kan räknas som ett av världens underverk från antiken.</p>
     </div>
     <div class="divider"></div>
     <div class="attraction_item">
-        <img src="./img/beiruts_nationalmuseum.jpg" alt="Beiruts nationalmuseum" class="attraction_image">
+        <img src="./img/beiruts_nationalmuseum.jpg" alt="Beiruts nationalmuseum" class="attraction_image ridge-border">
         <h3 class="attraction_name">Beiruts nationalmuseum</h3>
         <p class="attraction_description">Ett museum med en insamling som inleddes efter först världskriget. Museet har en samling på cirka 100.000 objekt, varav de flesta är antikviteter och medeltida fynd. Mycket värt att kolla upp inte sant?</p>
     </div>
     <div class="divider"></div>
     <div class="attraction_item">
-        <img src="./img/jeita_grotto.jpg" alt="Jeita Grotto" class="attraction_image">
+        <img src="./img/jeita_grotto.jpg" alt="Jeita Grotto" class="attraction_image ridge-border">
         <h3 class="attraction_name">Jeita grotto</h3>
         <p class="attraction_description">Jeita grottan är en grotta som har bildats under miljontals år på grund av upplösningen av kalksten. Med alla underbara scener som man kan se så är detta helt klart värt att besöka</p>
     </div>

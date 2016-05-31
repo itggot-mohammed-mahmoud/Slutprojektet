@@ -1,4 +1,7 @@
    <div id="contact">
+     <% if @user && @user.admin == true %>
+         <button>Edit</button>
+     <% end %>
         <h2>Contact</h2>
         <table>
                 <tr>

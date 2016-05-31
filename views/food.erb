@@ -1,18 +1,21 @@
     <h3>Food</h3>
+    <% if @user && @user.admin == true %>
+        <button>Edit</button>
+    <% end %>
     <div class="food_item">
-        <img src="/img/kibbe.jpg" alt="Kibbe" class="food_image">
+        <img src="/img/kibbe.jpg" alt="Kibbe" class="food_image ridge-border">
         <h3 class="food_name">Kibbe</h3>
         <p class="food_description">Kibbe är en maträtt från Levanten baserad på bulgur, hackad lök och mald köttfärs på nötkött, lamm, get eller kamel med kryddning från Mellanöstern.</p>
     </div>
     <div class="divider"></div>
     <div class="food_item">
-        <img src="./img/hummus.jpg" alt="Hummus" class="food_image">
+        <img src="./img/hummus.jpg" alt="Hummus" class="food_image ridge-border">
         <h3 class="food_name">Hummus</h3>
         <p class="food_description">Hummus är en sås som består av kikärter, sesampasta och olivolja med färsk vitlök, salt, och citronjuice. Det fullkomliga namnet på moset på arabiska är hummus bi tahīna som bokstavligen betyder "kikärter med sesampasta</p>
     </div>
     <div class="divider"></div>
     <div class="food_item">
-        <img src="./img/köfte.jpg" alt="Köfte" class="food_image">
+        <img src="./img/köfte.jpg" alt="Köfte" class="food_image ridge-border">
         <h3 class="food_name">Köfte</h3>
         <p class="food_description">Köfte, är ett samlingsnamn på maträtter från Turkiet gjorda på olika sorters färs. Färsen kan bestå av olika sorters kött tex nöt, lamm eller kyckling. I vegetarisk form så kan köfte göras av tex kikärtor, bondbönor eller zucchini.</p>
     </div>

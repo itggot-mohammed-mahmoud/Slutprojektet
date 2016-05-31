@@ -10,14 +10,17 @@ class App < Sinatra::Base
   end
 
   get '/' do
+    @user = User.get(session[:user_id])
   	erb :index
   end
 
   get '/food' do
+    @user = User.get(session[:user_id])
     erb :food
   end
 
   get '/contact' do
+    @user = User.get(session[:user_id])
     erb :contact
   end
 
@@ -26,11 +29,17 @@ class App < Sinatra::Base
   end
 
   get '/attractions' do
+    @user = User.get(session[:user_id])
     erb :attractions
   end
 
   get '/login' do
     erb :login
+  end
+
+  get '/signup' do
+
+    erb :signup
   end
 
   post '/login' do

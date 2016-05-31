@@ -1,96 +1,205 @@
-/* Import the fonts we'll use. (Note: it's better to import them using html, but we are lazy) */
-@import url("http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800");
-@import url("http://fonts.googleapis.com/css?family=Roboto:400,300");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:700");
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    font-family: 'Times New Roman', Arial;
+    color: #161616;
+    background: #fafafa url("../img/paper_texture.png") repeat;
+}
 
-body { margin: 0; padding: 0; font-size: 17px; font-family: 'Times New Roman', Arial; color: #161616; background: #fafafa url("../img/paper_texture.png") repeat; }
+div.site_header {
+    background: #ffffff url('../img/headerback.png') no-repeat fixed top center;
+    background-size: cover;
+    text-align: center;
+}
 
-/* The header container. */
-div.site_header { background: #ffffff url('../img/headerback.png') no-repeat fixed top center; background-size: cover; text-align: center; }
+img.site_logo {
+    width: 70%;
+    height: 280px;
+    margin: auto;
+}
 
-/* The site logo inside the header container. */
-img.site_logo { margin: 20px 0; }
+div.logo {
+    width: 100%;
+    height: 280px;
+    text-align: center;
+}
 
-/* Site header styling (title and logo) */
-div.logo     { height: 150px; max-width: 350px; width: 100%; margin: auto; }
-div.logo p   { font-family: 'Alegreya Sans SC', sans-serif; font-size: 22px; margin-top: 49px; float: left; color: #060412; }
-div.logo img { float: right; max-width: 120px; margin-top: -10px; }
+div.logo p {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 22px;
+    margin-top: 49px;
+    float: left;
+    color: #060412;
+}
 
-/* Preview image on the home page */
-img.preview { max-width: 300px; float: right; margin: 5px 15px; width: 100%; }
+img.preview {
+    max-width: 300px;
+    float: right;
+    margin: 5px 15px;
+    width: 100%;
+}
 
-/* Main div container, holding all other elements */
-div.container { max-width: 800px; width: 90%; padding: 2px 20px; margin: auto; }
+div.container {
+    max-width: 800px;
+    width: 68%;
+    padding: 2px 20px;
+    margin: auto;
+}
 
-/* The div containing info about a dish */
-div.food_item { display: inline-block; }
+div.food_item {
+    display: inline-block;
+}
 
-div.attraction_item { display: inline-block; }
+div.attraction_item {
+    display: inline-block;
+}
 
-/* The preview image of a dish */
-img.food_image { float:left; margin-right: 12px; }
+img.food_image {
+    float: left;
+    margin-right: 12px;
+}
 
-img.attraction_image { float:left; margin-right: 12px; }
+img.attraction_image {
+    float: left;
+    margin-right: 12px;
+}
 
-/* Google maps!! */
-#map { width: 500px; height: 400px; background-color: #CCC; margin: auto; }
+#map {
+    width: 500px;
+    height: 400px;
+    background-color: #CCC;
+    margin: auto;
+}
 
-#contact
-{
+#contact {
     margin: 0 auto;
     text-align: center;
     width: 380px;
 }
-    #contact > table
-    {
-        width: 100%;
-    }
 
-/* Dividers are used instead of hr's */
-div.divider { max-width: 700px; width: calc(90% - 100px); border-bottom: 1px solid #a84545; margin: 10px auto; }
+#contact > table {
+    width: 100%;
+}
 
-/*#map-search{display:none;}*/
+div.divider {
+    max-width: 700px;
+    width: calc(90% - 100px);
+    border-bottom: 1px solid #a84545;
+    margin: 10px auto;
+}
 
-/* The footer at the bottom of the page (copyright) */
-footer { text-align: center; margin-top: 10px; padding: 4px; color: #723f3f; font-size: 11px; }
+footer {
+    text-align: center;
+    margin-top: 10px;
+    padding: 4px;
+    color: #723f3f;
+    font-size: 11px;
+}
 
-/* Menu bar design */
-#navbar    { background: #B74D4D; width: auto;}
-#navbar ul { list-style: none; line-height: 1; display: block; padding-left: 5px; display: inline-block;
+#navbar {
+    background: #B74D4D;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#navbar ul {
+    list-style: none;
+    line-height: 1;
+    display: block;
+    padding-left: 5px;
+    display: inline-block;
     margin: 0 auto;
     position: relative;
     left: 50%;
-    transform: translateX(-50%);}
+    transform: translateX(-50%);
+}
 
-/* Make the menu bar to display inline instead displaying each item on individual lines. */
-#navbar ul:after { content: " "; font-size: 0; height: 0; visibility: hidden; }
-#navbar ul li    { display: inline-block; }
+#navbar ul:after {
+    content: " ";
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
 
-#navbar.align-right ul li { float: right;       }
-#navbar.align-center ul   { text-align: center; }
+#navbar ul li {
+    display: inline-block;
+}
 
-#navbar ul li a { color: #ffffff; text-decoration: none; display: block; padding: 15px 25px; transition: color .25s;
-    font-family: 'Alegreya Sans SC', sans-serif; font-weight: 700; font-size: 16px; position: relative; }
+#navbar.align-right ul li {
+    float: right;
+}
 
-/* The change that is done when mouse hover over a menu item. */
-#navbar ul li a:hover        { color: #121212; }
-#navbar ul li a:hover:before { width: 100%;    }
+#navbar.align-center ul {
+    text-align: center;
+}
 
-/* The dots between each menu item. */
-#navbar ul li a:after, #navbar ul li a:before { content: ""; display: block; position: absolute; transition: width .25s; }
-#navbar ul li a:after  { right: -3px; top: 19px; height: 6px; width: 6px; background: #ffffff; opacity: .5; }
-#navbar ul li a:before { left: 0; bottom: 0; height: 3px; width: 0; background: #121212;                    }
-/* Disable the dot after the last menu item. */
-#navbar ul li.last > a:after, #navbar ul li:last-child > a:after { display: none; }
+#navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 15px 25px;
+    transition: color .25s;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    position: relative;
+}
 
-/* The current page. */
-#navbar ul li.active a { color: #121212; }
-#navbar ul li.active a:before { width: 100%; }
+#navbar ul li a:hover {
+    color: #121212;
+}
 
-#navbar.align-right li.last > a:after, #navbar.align-right li:last-child > a:after { display: block; }
-#navbar.align-right li:first-child a:after { display: none; }
+#navbar ul li a:hover:before {
+    width: 100%;
+}
 
-/* TODO: The mobile version of the menu needs some work. */
+#navbar ul li a:after, #navbar ul li a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    transition: width .25s;
+}
+
+#navbar ul li a:after {
+    right: -3px;
+    top: 19px;
+    height: 6px;
+    width: 6px;
+    background: #ffffff;
+    opacity: .5;
+}
+
+#navbar ul li a:before {
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: #121212;
+}
+
+#navbar ul li.last > a:after, #navbar ul li:last-child > a:after {
+    display: none;
+}
+
+#navbar ul li.active a {
+    color: #121212;
+}
+
+#navbar ul li.active a:before {
+    width: 100%;
+}
+
+#navbar.align-right li.last > a:after, #navbar.align-right li:last-child > a:after {
+    display: block;
+}
+
+#navbar.align-right li:first-child a:after {
+    display: none;
+}
+
+/* inte klar, fixa till detta */
+
 @media screen and (max-width: 450px) {
     #navbar ul li {
         float: none;
@@ -118,13 +227,19 @@ footer { text-align: center; margin-top: 10px; padding: 4px; color: #723f3f; fon
         display: none;
     }
 
-    div.logo img {
+    div.logo {
+        background-image: url("");
         float: none;
         margin-top: 0;
     }
 
     div.container {
+        width: 88%;
         padding: 0;
+    }
+
+    div.lines > div {
+        width: 90% !important;
     }
 
     #map {
@@ -132,4 +247,63 @@ footer { text-align: center; margin-top: 10px; padding: 4px; color: #723f3f; fon
         height: 400px;
         background-color: #CCC;
     }
+}
+
+.ridge-border {
+    margin-right: 12px;
+    border: 8px ridge #B74D4D;
+}
+
+div.lines {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -999;
+}
+
+div.lines > div {
+    width: 70%;
+    height: 100%;
+    border-left: 2px solid #B74D4D;
+    border-right: 2px solid #B74D4D;
+    margin: 0 auto;
+}
+
+.action-button-login {
+    position: absolute !important;
+    top: 100px;
+    right: 60px;
+    height: 30px;
+    width: 80px;
+
+}
+.action-button-signup {
+    position: absolute !important;
+    top: 150px;
+    right: 60px;
+    height: 30px;
+    width: 80px;
+}
+
+.quick-fact{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 12.5%;
+    padding: 8px;
+    margin-top: 320px;
+}
+
+.center-content {
+    text-align: center;
+}
+
+.text-box {
+    display: inline;
+    text-align: center;
+    width: 365px;
+}
+
+.login-title{
+    text-align: center;
 }
